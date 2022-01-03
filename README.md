@@ -23,14 +23,19 @@ export PKG_CONFIG_PATH=$HOME/local_packages/lib/pkgconfig
 pip install tesserocr
 ```
 
-# Updatinhg LD_LIBRARY_PATH
+# Updating LD_LIBRARY_PATH
 LD_LIBRARY_PATH environment variable should be updated to point to where tesseract is installed. 
 Eg. export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/local_packages/lib
  
 To update environment variables for jupyter notebook in docker containers, modify kernel.json which is located here path_to_anaconda/envs/pytorch38/share/jupyter/kernels/python3. ( will be different depending on your setup).  
 
-Add "env" key:  
+kernel.json
 ```
  "env": {"LD_LIBRARY_PATH":"$LD_LIBRARY_PATH:$HOME/local_packages/lib"}
 ```
+
+# Download trained language models to tessdata directory
+The trained models can be found here. https://tesseract-ocr.github.io/tessdoc/Data-Files.html
+Download the desired language models and move them into the tessdata directory. Depending on where the tesseract installation path is, it should be located at $install_path/share/tessdata
+
 
