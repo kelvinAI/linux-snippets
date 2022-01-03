@@ -27,9 +27,10 @@ pip install tesserocr
 LD_LIBRARY_PATH environment variable should be updated to point to where tesseract is installed. 
 Eg. export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/local_packages/lib
  
-To update environment variables for jupyter notebook in docker containers, modify kernel.json which is located here path_to_anaconda/envs/pytorch38/share/jupyter/kernels/python3. ( will be different depending on your setup)
-Add "env" key:
-`
+To update environment variables for jupyter notebook in docker containers, modify kernel.json which is located here path_to_anaconda/envs/pytorch38/share/jupyter/kernels/python3. ( will be different depending on your setup).  
+
+Add "env" key:  
+```
  "env": {"LD_LIBRARY_PATH":"$LD_LIBRARY_PATH:$HOME/local_packages/lib"}
-`
+```
 
