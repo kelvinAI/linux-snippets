@@ -9,8 +9,8 @@ Useful Linux scripts for reference
 ```
 ./autogen.sh
 export LIBLEPT_HEADERSDIR=$HOME/local_packages/include  
-export PKG_CONFIG_PATH=$HOME/local_packages/lib/pkgconfig  
-./configure --prefix=$HOME/local_packages/ --with-extra-libraries=$HOME/local_packages/lib  
+export PKG_CONFIG_PATH=$HOME/local_packages/lib/pkgconfig:$HOME/local_packages/usr/lib  
+./configure --prefix=$HOME/local_packages/ --with-extra-libraries=$HOME/local_packages/lib --enable-debug  
 make -j10  
 make install -j10 
 ```
