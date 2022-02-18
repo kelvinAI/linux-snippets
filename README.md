@@ -71,18 +71,18 @@ wget
 wget 
 build-essential
 
-docker run --name tess ubuntu:focal
-docker image ls -a
-docker container ls -a
-docker start container_name
-docker attach container_name (to get shell)
+docker run --name tess ubuntu:focal  
+docker image ls -a  
+docker container ls -a  
+docker start container_name  
+docker attach container_name (to get shell)  
 
-docker save container.zip 
+docker save container.zip  
 
-# Build singularity image from docker.tar savefile
-singularity build tesseract-5.0.1.sif docker-archive://tesseract-5.0.1.tar
+# Build singularity image from docker.tar savefile  
+singularity build tesseract-5.0.1.sif docker-archive://tesseract-5.0.1.tar  
 
-# Fix localtime issue for singularity while creating docker image
-https://github.com/apptainer/singularity/issues/5465
-export TZ=Asia/Singapore
-ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+# Fix localtime issue for singularity while creating docker image  
+https://github.com/apptainer/singularity/issues/5465  
+export TZ=Asia/Singapore  
+ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone  
