@@ -81,3 +81,8 @@ docker save container.zip
 
 # Build singularity image from docker.tar savefile
 singularity build tesseract-5.0.1.sif docker-archive://tesseract-5.0.1.tar
+
+# Fix localtime issue for singularity while creating docker image
+https://github.com/apptainer/singularity/issues/5465
+export TZ=Asia/Singapore
+ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
