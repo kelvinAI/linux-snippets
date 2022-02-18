@@ -62,3 +62,20 @@ pkg-config
 ```
 pkg-config --cflags --libs pangocairo
 ```
+
+# Dockerfile
+Steps: 
+need to install:
+
+wget
+wget 
+build-essential
+
+docker run --name tess ubuntu:focal
+docker image ls -a
+docker container ls -a
+docker start container_name
+docker attach container_name (to get shell)
+
+docker save container.zip 
+
