@@ -79,3 +79,5 @@ docker attach container_name (to get shell)
 
 docker save container.zip 
 
+# Build singularity image from docker.tar savefile
+singularity build tesseract-5.0.1.sif docker-archive://tesseract-5.0.1.tar
