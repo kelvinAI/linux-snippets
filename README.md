@@ -1,6 +1,15 @@
 # linux-snippets
 Useful Linux scripts for reference
 
+## Compiling and install leptonica
+1. Download the latest leptonica from http://www.leptonica.org/download.html
+2. Extract, configure and install
+
+```
+./configure
+sudo make
+sudo checkinstall
+```
 
 # How to install packages in local folder without root
 For debian distros, packages can be downloaded from https://packages.ubuntu.com/
