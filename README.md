@@ -48,3 +48,8 @@ The trained models can be found here. https://tesseract-ocr.github.io/tessdoc/Da
 Download the desired language models and move them into the tessdata directory. Depending on where the tesseract installation path is, it should be located at $install_path/share/tessdata
 
 
+# Useful commands
+pkg-config
+```
+pkg-config --cflags --libs pangocairo
+```
