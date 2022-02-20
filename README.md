@@ -56,6 +56,9 @@ kernel.json
 The trained models can be found here. https://tesseract-ocr.github.io/tessdoc/Data-Files.html
 Download the desired language models and move them into the tessdata directory. Depending on where the tesseract installation path is, it should be located at $install_path/share/tessdata
 
+# Training
+- Set TESSDATA env variable to point to tessdata directory
+- run make clean in tesstrain root to clean before training (may fix the issue with unable to read boxes in .tiff images)
 
 # Useful commands
 pkg-config
