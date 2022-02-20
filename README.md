@@ -76,8 +76,8 @@ docker image ls -a
 docker container ls -a  
 docker start container_name  
 docker attach container_name (to get shell)  
-
-docker save container.zip  
+docker commit CONTAINER_NAME(or hash) NEW_IMAGE_NAME 
+docker save -o container.tar IMAGE_HASH
 
 # Build singularity image from docker.tar savefile  
 singularity build tesseract-5.0.1.sif docker-archive://tesseract-5.0.1.tar  
