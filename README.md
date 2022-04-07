@@ -74,6 +74,21 @@ wget
 wget 
 build-essential
 
+*can be quite buggy if image is loaded from existing .tar file*  
+```
+1. Create the container from image by running
+docker run -it repo:version
+2. Start the container
+docker container start container_name
+3. Attach to container
+docker container attach container_name
+
+Note:
+docker run repo:version or docker run -d repo:version 
+causes some weird issues ( container freezes )
+```
+
+
 docker run --name tess ubuntu:focal  
 docker image ls -a  
 docker container ls -a  
