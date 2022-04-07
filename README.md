@@ -65,7 +65,7 @@ pkg-config
 ```
 pkg-config --cflags --libs pangocairo
 ```
-
+---
 # Dockerfile
 Steps: 
 need to install:
@@ -79,8 +79,26 @@ docker image ls -a
 docker container ls -a  
 docker start container_name  
 docker attach container_name (to get shell)  
-docker commit CONTAINER_NAME(or hash) NEW_IMAGE_NAME 
-docker save -o container.tar IMAGE_HASH
+docker commit CONTAINER_NAME(or hash) NEW_IMAGE_NAME  
+docker save -o container.tar IMAGE_HASH  
+
+### Docker saving and loading  
+Container Images use:   
+- docker load  
+- docker save  
+Docker Containers:  
+- docker import  
+- docker export  
+
+#### Start a container from an image and run it in the background
+## First check what images are available
+docker images  
+docker run -t -d tess:5.0.1   [refer](https://stackoverflow.com/questions/30209776/docker-container-will-automatically-stop-after-docker-run-d)  
+
+## Now list the running containers
+docker container ls  
+## Attach to the running container
+docker attach container_name  
 
 # Build singularity image from docker.tar savefile  
 singularity build tesseract-5.0.1.sif docker-archive://tesseract-5.0.1.tar  
