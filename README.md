@@ -88,17 +88,20 @@ docker run repo:version or docker run -d repo:version
 causes some weird issues ( container freezes )
 ```
 
-
+```
 docker run --name tess ubuntu:focal
-# Hack. Perform some action first, eg. create /app folder otherwise docker container can't be started in the background in detached mode 
+# Hack. Perform some action first, eg. create /app folder otherwise
+# docker container can't be started in the background in detached mode  
+```
 
+```
 docker image ls -a  
 docker container ls -a  
 docker container start container_name  
 docker attach container_name (to get shell)  
 docker commit CONTAINER_NAME(or hash) NEW_IMAGE_NAME  
 docker save -o container.tar IMAGE_HASH  
-
+```
 ### Docker saving and loading  
 
 Container Images use:   
