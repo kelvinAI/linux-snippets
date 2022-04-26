@@ -89,7 +89,9 @@ causes some weird issues ( container freezes )
 ```
 
 
-docker run --name tess ubuntu:focal  
+docker run --name tess ubuntu:focal
+# Hack. Perform some action first, eg. create /app folder otherwise docker container can't be started in the background in detached mode 
+
 docker image ls -a  
 docker container ls -a  
 docker container start container_name  
